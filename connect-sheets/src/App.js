@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
    const { data, loading, error } = useGoogleSheets({
-    apiKey: 'AIzaSyB5nx15bNw10Y5YTlinwMElO3DQhLDbmKI',
+    apiKey: 'apikey',
     sheetId: '1FyBkFmdLO8BeNdmDohYRvAh_nJP1jsdsEZ_rPYm8m1s',
   });
 
