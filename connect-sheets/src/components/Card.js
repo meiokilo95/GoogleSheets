@@ -1,16 +1,13 @@
 import React from 'react'
 
-import Cards from './Cards'
-
-
-function Card() {
+function Card({Modelo}) {
   return (
-    <div className='card'>
-        <div className='card-body'>
-            <h4 className='card-title'> Mi titulo</h4>
-            
+    <div className='card text-center'>
+      <img src=""/>
+        <div className='card-body text-light'>
+        <h4 className='card-title'>{Modelo} </h4>
+        <p>Lorem Ipsu</p>
         </div>
-         
     </div>
   )
 }
