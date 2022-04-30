@@ -11,3 +11,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  width: 80vw !important;
+  max-width: 80vw !important;
+}
+ 
+.card.text-center.col-md-3 {
+  margin: 3vw;
+  padding: 0vw !important;
+}
+
+.row-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+
+.card  h4{
+  color: #000;
+}
+
+.card p{
+  color: #000;
+}
+
+p.precio {
+  background-color: #e2e8f0;
+  border-radius: 40px;
+  margin-left: 1vw;
+  padding: 0.3vw 1vw;
+}
+
+p.habitable{
+  padding-left: 2vw;
+}
+
+p.terreno{
+  padding-left: 2vw;
+}
+
+
+
+.contenedor_precio {
+  display: flex;
+}
+
+.contenedor_habitable{
+  display: flex;
+}
+
+.contenedor_terreno{
+  display: flex;
+}
+
+.conetenedor-datos {
+  padding: 1vw 2vw 3vw;
+}
+
+.card h4 {
+  color: #718096;
+  padding: 0vw 1vw;
+  margin-bottom: 0vw !important;
+}
+
+.card.col:hover {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+} 
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 2rem 1rem 0rem;
+}
