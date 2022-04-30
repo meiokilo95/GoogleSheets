@@ -53,14 +53,29 @@ p.terreno{
   padding-left: 2vw;
 }
 
+p.terreno {
+  background-color: #e2e8f0;
+  border-radius: 40px;
+  margin-left: 1vw;
+  padding: 0.3vw 1vw;
+}
+
 
 
 .contenedor_precio {
   display: flex;
 }
 
-.contenedor_habitable{
+.contenedor_habitable {
   display: flex;
+  padding: 1vw 0vw;
+}
+
+p.habitable {
+  background-color: #e2e8f0;
+  border-radius: 40px;
+  margin-left: 1vw;
+  padding: 0.3vw 1vw;
 }
 
 .contenedor_terreno{
