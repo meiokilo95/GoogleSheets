@@ -1,7 +1,6 @@
 
 connect-sheets/.DS_Store
 .DS_Store
-connect-sheets/node_modules
+connect-sheets/node_modules/
 connect-sheets/build/
 connect-sheets/package-lock.json
-.DS_Store
