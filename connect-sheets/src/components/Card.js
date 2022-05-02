@@ -28,7 +28,8 @@ function Card({ props }) {
           <p className='titulo-terreno'>M2 de terreno</p>
           <p className='terreno'>{casa["M2 de Terreno:"]}</p>
         </div>
-        <Link to={casa["ID"]}>View more</Link>
+        
+        <Link to={casa["ID"] } state={{informacion:casa}}>View more</Link>
 
       </div>
 

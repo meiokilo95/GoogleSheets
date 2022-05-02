@@ -100,3 +100,7 @@ p.habitable {
   flex: 1 1 auto;
   padding: 2rem 1rem 0rem;
 }
+
+.contenedor-img img {
+  width: 50vw !important;
+}

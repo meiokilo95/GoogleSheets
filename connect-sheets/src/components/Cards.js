@@ -10,6 +10,10 @@ function Cards() {
       sheetId: '1FyBkFmdLO8BeNdmDohYRvAh_nJP1jsdsEZ_rPYm8m1s',
     });
 
+    var myJsonString = JSON.stringify(data);
+
+    console.log(myJsonString)
+
     if (loading) {
       return <div>Loading...</div>;
     }
