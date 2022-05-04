@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './HouseDetails.css'
+
 import {useLocation} from 'react-router-dom';
 
 function HouseDetails({ props }) {
@@ -10,36 +12,61 @@ function HouseDetails({ props }) {
 
     console.log(detalles)
     return (
-        <div className='card col' >
+        <div className='contenedor-detalles'>
+        <div className='img_tabla'>
             <div className='contenedor-img'>
                 <img src={detalles["Link fachada"]} />
             </div>
-            
-      <div className='card-body text-light'>
-        <h4 className='card-title'> {detalles["Modelo:"]} </h4>
-      </div>
+
+            <div className='tabla_datos'>
+
+            <table class="tabla_detalles">
+            <tr>
+              <td className='titulo_tabla'> Privada:</td>
+              <td className='descrp_tabla'>{detalles["Privada:"]}</td> 
+            </tr>
+            <tr>
+            <td className='titulo_tabla'> Dirección:</td>
+              <td className='descrp_tabla'>{detalles["Dirección:"]}</td>
+            </tr>
+
+            <tr>
+            <td className='titulo_tabla'>Proyecto por:</td>
+            <td className='descrp_tabla'>{detalles["Proyecto por:"]}</td>
+            </tr>
+
+            <tr>
+            <td className='titulo_tabla'>Inicio Obra:</td>
+            <td className='descrp_tabla'>{detalles[" Inicio Obra:"]}</td>
+            </tr>
+
+            <tr>
+            <td className='titulo_tabla'>Termino Obra:</td>
+            <td className='descrp_tabla'> {detalles["Termino Obra:"]}</td>
+            </tr>
+            </table>
+
+
+           
+        </div>
+
+        </div>
+        <div className='text-light'>
+              <h4 className='card-title'>{detalles["No. Casa:"]} - {detalles["Modelo:"]} </h4>
+            </div>  
 
       <div className='conetenedor-datos'>
+      
         <div className='contenedor_precio'>
-          <p className='titulo-precio'>Precio al dia de HOY:</p>
           <p className='precio'> {detalles["Precio Venta al HOY:"]}</p>
         </div>
         <div className='contenedor_habitable'>
-          <p className='titulo-habitable'>M2 Construccion habitable:</p>
           <p className='habitable'>{detalles["M2 de Constr. Habit.:"]}</p>
         </div>
         <div className='contenedor_terreno'>
-          <p className='titulo-terreno'>M2 de terreno:</p>
           <p className='terreno'>{detalles["M2 de Terreno:"]}</p>
         </div>
-        <div className='contenedor_terreno'>
-          <p className='titulo-terreno'>Privada:</p>
-          <p className='terreno'>{detalles["Privada:"]}</p>
-        </div>
-        <div className='contenedor_terreno'>
-          <p className='titulo-terreno'>Dirección:</p>
-          <p className='terreno'>{detalles["Dirección:"]}</p>
-        </div>
+        
       </div>
         </div>
     )

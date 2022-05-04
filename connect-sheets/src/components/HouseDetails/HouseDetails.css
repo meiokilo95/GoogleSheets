@@ -1,0 +1,60 @@
+.contenedor-detalles .img_tabla {
+    display: flex;
+}
+
+.contenedor-detalles .contenedor-img img {
+    width: 30vw !important;
+}
+
+.contenedor-detalles .contenedor_tabla {
+    display: flex;
+}
+
+
+.contenedor-detalles .conetenedor-datos {
+    padding: 1vw 0vw 2vw;
+    width: 31vw;
+    display: flex;
+}
+
+.contenedor-detalles .contenedor_precio,.contenedor-detalles .contenedor_habitable,.contenedor-detalles .contenedor_terreno {
+    margin: 0vw 0vw 0vw 1vw;
+}
+
+.contenedor-detalles .tabla_datos {
+    margin-left: 3vw;
+}
+
+.contenedor-detalles td.titulo_tabla {
+    padding: 1vw;
+}
+
+.contenedor-detalles table.tabla_detalles {
+    width: 20vw;
+}
+
+.contenedor-detalles td.descrp_tabla {
+    text-align: center;
+    border: 1px solid;
+}
+
+.contenedor-detalles td.titulo_tabla {
+    border: 1px solid;
+}
+
+.contenedor-detalles .card {
+     border: none !important
+}
+
+.contenedor-detalles {
+    padding: 3vw;
+}
+
+.contenedor-detalles h4.card-title {
+    color: #718096;
+}
+
+.contenedor-detalles .text-light {
+    padding: 1vw;
+    color: #718096;
+} 

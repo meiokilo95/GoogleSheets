@@ -21,15 +21,18 @@ function Card({ props }) {
           <p className='precio'> {casa["Precio Venta al HOY:"]}</p>
         </div>
         <div className='contenedor_habitable'>
-          <p className='titulo-habitable'>M2 Construccion habitable</p>
+          <p className='titulo-habitable'>M2 Construcción habitable:</p>
           <p className='habitable'>{casa["M2 de Constr. Habit.:"]}</p>
         </div>
         <div className='contenedor_terreno'>
-          <p className='titulo-terreno'>M2 de terreno</p>
+          <p className='titulo-terreno'>M2 de terreno:</p>
           <p className='terreno'>{casa["M2 de Terreno:"]}</p>
         </div>
         
-        <Link to={casa["ID"] } state={{informacion:casa}}>View more</Link>
+        <div className='contenedor_boton'>
+          <Link to={casa["ID"] } state={{informacion:casa}}>Ver más</Link>
+        </div>
+        
 
       </div>
 

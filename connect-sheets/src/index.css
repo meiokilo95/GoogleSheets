@@ -34,15 +34,29 @@ code {
   color: #000;
 }
 
+.card.col img {
+  object-fit: cover;
+  width: 17vw;
+  height: 12vw;
+  margin: auto;
+}
+
 .card p{
   color: #000;
+  margin: 0vw;
+}
+
+.contenedor_precio, .contenedor_habitable, .contenedor_terreno {
+  margin-block: 1vw;
 }
 
 p.precio {
   background-color: #e2e8f0;
-  border-radius: 40px;
-  margin-left: 1vw;
-  padding: 0.3vw 1vw;
+    border-radius: 40px;
+    padding: 0.3vw 1vw;
+    width: 9vw !important;
+    text-align: center;
+    margin: 0vw;
 }
 
 p.habitable{
@@ -55,31 +69,21 @@ p.terreno{
 
 p.terreno {
   background-color: #e2e8f0;
-  border-radius: 40px;
-  margin-left: 1vw;
-  padding: 0.3vw 1vw;
+    border-radius: 40px;
+    padding: 0.3vw 1vw;
+    width: 9vw !important;
+    text-align: center;
+    margin: 0vw;
 }
 
-
-
-.contenedor_precio {
-  display: flex;
-}
-
-.contenedor_habitable {
-  display: flex;
-  padding: 1vw 0vw;
-}
 
 p.habitable {
   background-color: #e2e8f0;
   border-radius: 40px;
-  margin-left: 1vw;
   padding: 0.3vw 1vw;
-}
-
-.contenedor_terreno{
-  display: flex;
+  width: 9vw !important;
+  text-align: center;
+  margin: 0vw;
 }
 
 .conetenedor-datos {
@@ -104,3 +108,24 @@ p.habitable {
 .contenedor-img img {
   width: 50vw !important;
 }
+
+.contenedor_boton {
+  text-align: center;
+  width: 10vw;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 40px;
+  border: 1px solid #0099CC;
+  padding: 0.2vw 0vw;
+  margin-top: 2vw;
+}
+
+.contenedor_boton a {
+  color: #0099CC !important;
+  text-decoration: none !important;
+}
+
+.card{
+  border: 2px solid rgba(0,0,0,.125) !important;
+}
+
