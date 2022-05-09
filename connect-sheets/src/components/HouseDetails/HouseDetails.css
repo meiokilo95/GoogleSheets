@@ -58,3 +58,12 @@
     padding: 1vw;
     color: #718096;
 } 
+
+.pagination ul{
+    display: flex;
+    list-style: none;
+}
+
+.pagination ul li{
+    margin-left: 20px;
+}
