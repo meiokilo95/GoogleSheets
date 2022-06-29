@@ -4,3 +4,4 @@ connect-sheets/.DS_Store
 connect-sheets/node_modules/*
 connect-sheets/build/
 connect-sheets/package-lock.json
+connect-sheets/src/constants.js
