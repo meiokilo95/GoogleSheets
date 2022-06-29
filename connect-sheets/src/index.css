@@ -13,6 +13,7 @@ code {
 }
 
 .container {
+  margin-top: 20px;
   width: 80vw !important;
   max-width: 80vw !important;
 }
@@ -54,7 +55,6 @@ p.precio {
   background-color: #e2e8f0;
     border-radius: 40px;
     padding: 0.3vw 1vw;
-    width: 9vw !important;
     text-align: center;
     margin: 0vw;
 }
@@ -71,7 +71,6 @@ p.terreno {
   background-color: #e2e8f0;
     border-radius: 40px;
     padding: 0.3vw 1vw;
-    width: 9vw !important;
     text-align: center;
     margin: 0vw;
 }
@@ -81,7 +80,6 @@ p.habitable {
   background-color: #e2e8f0;
   border-radius: 40px;
   padding: 0.3vw 1vw;
-  width: 9vw !important;
   text-align: center;
   margin: 0vw;
 }
@@ -95,10 +93,6 @@ p.habitable {
   padding: 0vw 1vw;
   margin-bottom: 0vw !important;
 }
-
-.card.col:hover {
-  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
-} 
 
 .card-body {
   flex: 1 1 auto;
@@ -129,3 +123,81 @@ p.habitable {
   border: 2px solid rgba(0,0,0,.125) !important;
 }
 
+.card.col:hover {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+} 
+
+.col {
+  float: left;
+  margin: 10px;
+  min-height: 100px;
+}
+
+.withoutmargin {
+  margin: 0 auto;
+}
+
+.col-2 {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.col-3 {
+  width: 33%;
+  margin: 0 auto;
+}
+
+.col-4 {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.col-5 {
+  width: 50% !important;
+  margin: 0 auto;
+}
+
+.col-4-reverse {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.col-40-60 {
+  width: 40%;
+  margin: 0 auto;
+}
+.col-60-40 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.col-30-70 {
+  width: 30%;
+  margin: 0 auto;
+}
+.col-70-30 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.col-3-reverse {
+  width: 66.6%;
+  margin: 0 auto;
+}
+
+.col-2-reverse {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.col-10 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.padding20{
+  padding: 20px;
+}
+.list h3{
+  font-size: 1.2rem;
+}

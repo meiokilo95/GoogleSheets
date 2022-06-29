@@ -5,7 +5,7 @@ import { Menu } from './components/Menu/Menu';
 import HouseDetails from './components/HouseDetails/HouseDetails';
 
 const App = () => {
-  return <div>
+  return (
     <Router>
       <Menu />
       <Routes>
@@ -13,7 +13,7 @@ const App = () => {
         <Route path='/:id' exact element={<HouseDetails />} />
       </Routes>
     </Router>
-  </div>;
+  )
 };
 
 

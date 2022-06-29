@@ -6,7 +6,7 @@ export function Menu({ props }) {
 
     return (
         <Navbar bg="dark">
-            <Navbar.Brand href="/">
+            <Navbar.Brand href="https://yodesarrollo.mx">
                 <img
                     src={logo}
                     className="d-inline-block align-top"

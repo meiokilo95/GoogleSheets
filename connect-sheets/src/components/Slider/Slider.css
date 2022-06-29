@@ -1,0 +1,41 @@
+.dot{
+    cursor: pointer;
+    height: 8px;
+    width: 30px !important;
+    margin: 0 2px;
+    background-color: #009c00;
+    border-radius: 0 !important;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,.active, .dot:hover {
+    background-color: #017ec7;
+}
+
+.carousel-container img{
+    border-radius: 0px !important;
+}
+
+.box{
+    margin: 0 !important;
+}
+
+.images_slider{
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(6, 5, 7, 0.438);
+}
+
+.carousel.carousel-slider{
+    z-index: 0;
+}

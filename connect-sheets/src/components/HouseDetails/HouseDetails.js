@@ -1,91 +1,82 @@
 import React from 'react'
-
+import axios from 'axios';
+import { Link, useLocation, useParams } from 'react-router-dom';
+import FixedCard from './FixedCard';
+import { API_KEY } from '../../constants';
 import './HouseDetails.css'
+import Slider from '../Slider/Slider';
+import Viabilidad from './Viabilidad';
+import Proyectos from './Proyectos';
+import Inmueble from './Inmueble';
+import Terreno from './Terreno';
 
-import { useLocation } from 'react-router-dom';
+function HouseDetails() {
 
-function HouseDetails({ props }) {
+  const [house, setHouse] = React.useState([])
+  const [images, setImages] = React.useState([])
+  const [option, setOption] = React.useState("viabilidad")
+  const params = useParams();
 
+  React.useEffect(() => {
+    if (params.id) {
+      let sheet = params.id
+      axios.get(`https://sheets.googleapis.com/v4/spreadsheets/1FyBkFmdLO8BeNdmDohYRvAh_nJP1jsdsEZ_rPYm8m1s/values/${sheet}?key=${API_KEY}`)
+        .then(res => {
+          const data = res.data.values;
+          sliderImg(data);
+          data.shift()
+          setHouse(data)
+        })
 
-  const location = useLocation()
-  const detalles = location.state.informacion
+    }
+  }, [])
 
-  console.log(detalles)
+  const sliderImg = (data) => {
+    let i = 22;
+    let aux = [];
+    while (data[i][5]) {
+      if (data[i][5])
+        aux.push(`https://drive.google.com/uc?id=${data[i][5].split('/')[5]}`)
+      else break;
+      i++;
+    }
+    setImages(aux)
+  }
+
+  const Content = () => {
+    switch (option) {
+      case "viabilidad": return <Viabilidad props={house} />
+      case "terreno": return <Terreno props={house} />
+      case "inmueble": return <Inmueble props={house} />
+      case "proyectos": return <Proyectos props={house} />
+    }
+  }
+
+  // console.log(house[7][5])
   return (
-    <div className='contenedor-detalles'>
-      <div className='img_tabla'>
-        <div className='contenedor-img'>
-          <img src={detalles["Link fachada"]} />
-        </div>
-
-        <div className='tabla_datos'>
-
-          <table class="tabla_detalles">
-            <tr>
-              <td className='titulo_tabla'> Privada:</td>
-              <td className='descrp_tabla'>{detalles["Privada:"]}</td>
-            </tr>
-            <tr>
-              <td className='titulo_tabla'> Dirección:</td>
-              <td className='descrp_tabla'>{detalles["Dirección:"]}</td>
-            </tr>
-
-            <tr>
-              <td className='titulo_tabla'>Proyecto por:</td>
-              <td className='descrp_tabla'>{detalles["Proyecto por:"]}</td>
-            </tr>
-
-            <tr>
-              <td className='titulo_tabla'>Inicio Obra:</td>
-              <td className='descrp_tabla'>{detalles[" Inicio Obra:"]}</td>
-            </tr>
-
-            <tr>
-              <td className='titulo_tabla'>Termino Obra:</td>
-              <td className='descrp_tabla'> {detalles["Termino Obra:"]}</td>
-            </tr>
-          </table>
-
-
-
-        </div>
-
-      </div>
-      <div className='text-light'>
-        <h4 className='card-title'>{detalles["No. Casa:"]} - {detalles["Modelo:"]} </h4>
-      </div>
-
-      <div className='conetenedor-datos'>
-
-        <div className='contenedor_precio'>
-          <p className='precio'> {detalles["Precio Venta al HOY:"]}</p>
-        </div>
-        <div className='contenedor_habitable'>
-          <p className='habitable'>{detalles["M2 de Constr. Habit.:"]}</p>
-        </div>
-        <div className='contenedor_terreno'>
-          <p className='terreno'>{detalles["M2 de Terreno:"]}</p>
-        </div>
-
-      </div>
-      <div className='pagination'>
-        <div className='pages'>
-          <ul>
-            <li>
-              <button className='page'>1</button>
-            </li>
-            <li>
-              <button className='page'>2</button>
-            </li>
-            <li>
-              <button className='page'>3</button>
-            </li>
-            <li>
-              <button className='page'>4</button>
-            </li>
-          </ul>
+    <div className='container'>
+      <div className='padding20 col col-70-30' >
+        <div className='card padding20' >
+          <div className='content'>
+            {(house.length > 0) ?
+              <>
+                <Slider images={images} />
+                <Content />
+              </>
+              : <></>
+            }
+          </div>
+          <div className='footer'>
+            <ul>
+              <li onClick={() => { setOption("viabilidad") }} className={option == "viabilidad" ? "active" : ""}><a>Viabilidad</a></li>
+              <li onClick={() => { setOption("terreno") }} className={option == "terreno" ? "active" : ""}><a>Terreno</a></li>
+              <li onClick={() => { setOption("inmueble") }} className={option == "inmueble" ? "active" : ""}><a>Inmueble</a></li>
+              <li onClick={() => { setOption("proyectos") }} className={option == "proyectos" ? "active" : ""}><a>Proyectos</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+      <FixedCard props={house} />
     </div>
   )
 }
