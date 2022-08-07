@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function Card({ props }) {
-  console.log(props)
-  let proj = props
+  let proj = props.casa
 
   return (
     <div className='card col' >
@@ -26,7 +25,7 @@ function Card({ props }) {
         </div>
 
         <div className='contenedor_boton'>
-          <Link to={{ pathname: proj[2], state: { id: proj[2] } }}>Ver más</Link>
+          <Link to={{ pathname: proj[2], state: { id: proj[2], content: props.content } }}>Ver más</Link>
         </div>
       </div>
     </div>

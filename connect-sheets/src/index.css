@@ -201,3 +201,18 @@ p.habitable {
 .list h3{
   font-size: 1.2rem;
 }
+
+.backBtn{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #4e84d5;
+  background: #4e84d5;
+  color: #fff;
+  text-decoration: none;
+  display: flow-root;
+}
+
+.backBtn:hover{
+  background-color: #fff;
+  color: #4e84d5;
+}

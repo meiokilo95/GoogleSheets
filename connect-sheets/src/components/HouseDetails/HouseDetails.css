@@ -1,3 +1,17 @@
+@font-face {
+    font-family: rollandinemilie;
+    src: url(../../assets/fonts/rollandinemilie.regular.ttf);
+}
+
+.houseTitle{
+    font-family: rollandinemilie;
+    background: #2c3645;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+}
+
 .contenedor-detalles .img_tabla {
     display: flex;
 }
@@ -83,7 +97,6 @@ ul.list {
     width: 100%;
     max-height: 350px;
     object-fit: contain;
-    background: #eef6ff;
 }
 
 .list-content{
