@@ -14,8 +14,9 @@ code {
 
 .container {
   margin-top: 20px;
-  width: 80vw !important;
-  max-width: 80vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: inline-block;
 }
  
 .card.text-center.col-md-3 {
@@ -36,10 +37,11 @@ code {
 }
 
 .card.col img {
-  object-fit: cover;
-  width: 17vw;
-  height: 12vw;
-  margin: auto;
+    object-fit: cover;
+    width: 100%;
+    height: 12vw;
+    margin: auto;
+    min-height: 200px;
 }
 
 .card p{
@@ -105,7 +107,7 @@ p.habitable {
 
 .contenedor_boton {
   text-align: center;
-  width: 10vw;
+  width: 50%;
   margin: auto;
   background-color: #fff;
   border-radius: 40px;
@@ -209,10 +211,63 @@ p.habitable {
   background: #4e84d5;
   color: #fff;
   text-decoration: none;
-  display: flow-root;
+  display: inline-block;
 }
 
 .backBtn:hover{
   background-color: #fff;
   color: #4e84d5;
+}
+
+
+.row {
+  display: -webkit-flex;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+@media screen and (max-width: 600px) {
+  .col-2,
+  .col-2-reverse,
+  .col-3,
+  .col-3-reverse,
+  .col-4,
+  .col-4-reverse,
+  .col-5,
+  .col-10 {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .footer ul {
+    display: contents !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .row {
+    display: inline;
+  }
+  .container {
+    margin-left: 0px;
+  }
+  .col-4,
+  .col-4-reverse,
+  .col-3,
+  .col-3-reverse,
+  .col-2,
+  .col-2-reverse {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .col-10 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer ul {
+    display: contents !important;
+  }
 }

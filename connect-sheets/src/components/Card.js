@@ -6,7 +6,7 @@ function Card({ props }) {
 
   return (
     <div className='card col' >
-      <img src={(proj[5]) ? `https://drive.google.com/uc?id=${proj[5].split('/')[5]}` : 'http://yodesarrollo.mx/img/logo_large.png'} style={{ backgroundColor: (proj[5]) ? '' : "#070a50", objectFit: "contain", objectPosition: "left" }} />
+      <img src={(proj[5]) ? `https://drive.google.com/uc?id=${proj[5].split('/')[5]}` : 'http://yodesarrollo.mx/img/logo_large.png'} style={{ backgroundColor: (proj[5]) ? '' : "#070a50", objectFit: "contain", objectPosition: "center" }} />
       <div className='card-body text-light'>
         <h4 className='card-title'> {proj[2]} </h4>
       </div>

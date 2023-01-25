@@ -5,9 +5,9 @@
 
 .houseTitle{
     font-family: rollandinemilie;
-    background: #2c3645;
+    background: #ebebeb;
     border-radius: 10px;
-    color: #fff;
+    /* color: #fff; */
     font-size: 3em;
     text-align: center;
 }

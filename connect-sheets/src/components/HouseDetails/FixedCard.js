@@ -10,7 +10,7 @@ function FixedCard({ props }) {
 
     return (
         (house.length > 0) ?
-            <div className='padding20 col col-30-70' >
+            <div className='padding20 col col-4' >
                 <div className='card' >
                     <ul className='list'>
                         <li><h3>{house[1][0]}</h3><span>{house[1][1] + " " + house[3][1]}</span></li>
