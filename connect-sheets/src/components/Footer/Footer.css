@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  z-index: 6;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.footer .social {
+  color: #fff;
+}
+
+.footer a i {
+  color: #fff;
+  font-size: 2rem;
+  margin: 10px;
+}
+
+.footer .text-note {
+  font-size: 12px;
+  padding: 20px;
+}

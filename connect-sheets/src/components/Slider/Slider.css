@@ -39,3 +39,10 @@
 .carousel.carousel-slider{
     z-index: 0;
 }
+
+@media screen and (max-width: 600px){
+    .dot {
+        width: 10px !important;
+    }
+    
+}

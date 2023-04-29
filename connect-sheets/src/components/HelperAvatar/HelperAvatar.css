@@ -1,0 +1,208 @@
+.helper {
+  position: fixed;
+  z-index: 9;
+  bottom: 25px;
+  right: 25px;
+  width: 100px;
+  height: 100px;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  width: 100px;
+  height: 100px;
+}
+
+.avatar:hover {
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 65%);
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 100px;
+}
+
+.helperFrame {
+  position: fixed;
+  z-index: 9;
+  right: 25px;
+  bottom: 125px;
+  width: 25%;
+}
+
+.helperFrame .card {
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 65%);
+  transition: all 500ms;
+  display: inline-block;
+}
+
+.helperFrame .card .title {
+  padding: 0px 0px 10px 0px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+
+.helperFrame .card .title span {
+  float: right;
+  cursor: pointer;
+}
+
+.helperFrame .card img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid #424242;
+}
+
+.helper .msg {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.msg .col {
+  min-height: 40px !important;
+  border-radius: 15px;
+  overflow: hidden;
+  display: grid;
+  text-align: center;
+}
+
+.msg .whatsappButton {
+  background-color: #25ba3d;
+}
+
+.msg .messenger {
+  background-color: #027df2;
+}
+
+.msg .email {
+  background-color: #f2c755;
+}
+
+.msg .phone {
+  background-color: #068891;
+}
+.msg .calendar {
+  background-color: #d37800;
+}
+
+.msgBox {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.msg i {
+  margin-right: 10px;
+}
+.msg .col a {
+  padding: 8px;
+  margin: 1px;
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .helperFrame {
+    width: 30%;
+    position: fixed;
+    z-index: 9;
+    right: 25px;
+    bottom: 125px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .helper {
+    bottom: 60px;
+    right: 0px;
+  }
+  .helperFrame {
+    right: 0px;
+    bottom: 150px;
+    width: 35%;
+  }
+  .helperFrame .card .title span {
+    color: #000;
+  }
+
+  .helperFrame .avatarProfile {
+    width: 20% !important;
+    margin-right: 0px !important;
+  }
+
+  .helperFrame .message {
+    width: 80% !important;
+  }
+}
+.card {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 50%);
+  color: #000;
+  display: -webkit-flex;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 15px;
+}
+
+.col-2{
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .helperFrame .avatarProfile {
+    display: none;
+  }
+  .helperFrame .message {
+    width: 100% !important;
+  }
+  .helperFrame {
+    right: 0px;
+    bottom: 150px;
+    width: 55%;
+}
+  .helper {
+    bottom: 10px;
+    right: 5px;
+    width: 60px;
+    height: 60px;
+  }
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .avatar img {
+    width: 100%;
+  }
+  .alice-carousel__dots-item{
+    padding: 5px;
+    margin-top: 0px !important;
+  }
+  .alice-carousel__dots{
+    margin: 0px !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .helperFrame .avatarProfile {
+    display: none;
+  }
+  .helperFrame .message {
+    width: 100% !important;
+  }
+  .helperFrame {
+    right: 0px;
+    bottom: 150px;
+    width: 100%;
+  }
+}
